@@ -1,0 +1,24 @@
+Bottle v0.13-dev server starting up (using WSGIRefServer())...
+Listening on http://0.0.0.0:8081/
+Hit Ctrl-C to quit.
+
+Traceback (most recent call last):
+  File "ns_server.py", line 198, in <module>
+    run(app, host="0.0.0.0", port=int(ns.server_port), debug=ns.debug)
+  File "/xue/NebulaSolarDash/lib/bottle.py", line 3476, in run
+    server.run(app)
+  File "/xue/NebulaSolarDash/lib/bottle.py", line 3046, in run
+    handler_cls)
+  File "/usr/lib64/python2.7/wsgiref/simple_server.py", line 144, in make_server
+    server = server_class((host, port), handler_class)
+  File "/usr/lib64/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib64/python2.7/wsgiref/simple_server.py", line 48, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib64/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib64/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
